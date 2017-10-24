@@ -1,0 +1,19 @@
+.Navbar {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-bottom: 62px;
+}
+
+.Navbar img {
+  max-height: 65px;
+  max-width: 213px;
+}
+
+.searchbar {
+  margin-left: auto;
+  align-self: center;
+  width: 60px;
+   height: 60px;
+}

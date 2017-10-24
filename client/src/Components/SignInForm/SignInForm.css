@@ -1,0 +1,195 @@
+.SignInForm {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 408px;
+  padding: 32px 50px 40px 50px;
+  border: 3px solid #f6f6f6;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.SignInForm form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.SignInForm h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #414141;
+}
+
+.SignInForm h2 {
+  color: #333;
+}
+
+.input-container {
+  width: 100%;
+  height: 48px;
+  position: relative;
+}
+
+span.validation-error {
+  text-align: center;
+  width: 115px;
+  position: absolute;
+  top: -17px;
+  right: 2px;
+  color: #f6303f;
+  font-size: 12px;
+  background-color: #fff0f1;
+}
+
+.input-container:first-child {
+  margin-bottom: 30px;
+}
+
+.input-fields {
+  width: 300px;
+  height: 48px;
+  border: 1.5px solid #f6f6f6;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #414141;
+  padding-left: 22px;
+}
+
+.floating-label {
+  position: absolute;
+  color: #6f6f6f;
+  pointer-events: none;
+  left: 22px;
+  top: 16px;
+  font-weight: 600;
+  transition: 0.2s ease all;
+}
+
+.input-fields:focus~.floating-label, .input-fields:not([value=""]):not(:focus)~.floating-label {
+  top: -20px;
+  left: 0;
+  opacity: 1;
+  font-style: italic;
+}
+
+.has-error {
+  border: 1px solid #f6303f;
+}
+
+.input-fields:focus {
+  outline: none;
+  border: 1px solid #437cb6;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 4px 1px #daedff;
+  -moz-box-shadow: 0px 0px 4px 1px #daedff;
+  box-shadow: 0px 0px 4px 1px #daedff;
+}
+
+.formFooter {
+  font-size: 12px;
+  display: flex;
+  margin: 20px 0;
+}
+
+.checkbox-keep-session>input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-keep-session>input[type='checkbox']+label {
+  position: relative;
+  width: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.checkbox-keep-session>input[type='checkbox']+label:before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  content: '';
+  vertical-align: text-top;
+  border: 1px solid #0053a1;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.checkbox-keep-session>input[type='checkbox']:focus+label:before {
+  box-shadow: 0 0 0 3px #f6f6f6;
+}
+
+.checkbox-keep-session>input[type='checkbox']:checked+label:before {
+  background: #0053a1;
+  border: 1px solid #0053a1;
+}
+
+.checkbox-keep-session>input[type='checkbox']:checked+label:after {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 2px;
+  height: 2px;
+  content: '';
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+}
+
+.checkbox-keep-session label {
+  color: #414141;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                 supported by Chrome and Opera */
+}
+
+.formFooter a {
+  margin-left: auto;
+  text-decoration: none;
+  color: #05549f;
+}
+
+.formFooter a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  padding: 9px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 300px;
+  min-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  background-color: #0053a1;
+}
+
+.btn-submit:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 4px 4px #daedff;
+  -moz-box-shadow: 0px 0px 4px 4px #daedff;
+  box-shadow: 0px 0px 4px 4px #daedff;
+}

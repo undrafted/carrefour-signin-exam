@@ -1,0 +1,23 @@
+.Product {
+  margin: 0 30px;
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.Product img {
+  height: 200px;
+  width: 200px;
+  border: 3px solid #f6f6f6;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #414141;
+  margin: 20px 0 2px 0;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 600;
+}
