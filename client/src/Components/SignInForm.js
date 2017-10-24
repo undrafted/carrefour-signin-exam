@@ -87,13 +87,13 @@ class SignInForm extends Component {
 
         <form onSubmit={this.onFormSubmit}>
 
-          <div class="input-container">
+          <div className="input-container">
             <span className="validation-error">{this.state.fieldErrors.username}</span>
             <input name='username' type='text' value={this.state.fields.username} onChange={this.onInputChange} className={`input-fields ${this.state.fieldClassNames.username}`}/>
             <span className="floating-label">Username</span>
           </div>
 
-          <div class="input-container">
+          <div className="input-container">
             <span className="validation-error">{this.state.fieldErrors.password}</span>
             <input name='password' type='password' value={this.state.fields.password} onChange={this.onInputChange} className={`input-fields ${this.state.fieldClassNames.password}`}/>
             <span className="floating-label">Password</span>

@@ -21,6 +21,11 @@ class ProductsSection extends Component {
           src: '../assets/product-logo.png',
           name: 'iPhone 8 Black',
           price: 'AED 3000'
+        },
+        {
+          src: '../assets/product-logo.png',
+          name: 'iPhone 8 Black',
+          price: 'AED 3000'
         }
       ]
     };
@@ -30,7 +35,7 @@ class ProductsSection extends Component {
     return (
       <div className='ProductsSection'>
         {
-          this.state.products.map((product) => <Product src={product.src} name={product.name} price={product.price}/>
+          this.state.products.map((product, i) => <Product src={product.src} name={product.name} price={product.price} key={i}/>
         )}
       </div>
     );
