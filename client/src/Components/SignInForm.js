@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './SignInForm/SignInForm.css';
 
 import LoginService from '../ServiceHelpers/LoginService';
@@ -31,19 +31,21 @@ class SignInForm extends Component {
   onFormSubmit = (evt) => {
     const signInDetails = this.state.fields;
 
+    //to prevent default browser behavior on form submission
     evt.preventDefault();
 
+    //check if there are errors, prevent ajax call by returning prompty
     if (this.validate(signInDetails)) {
-
       return;
-
     } else {
-      this.setState({
-        fieldClassNames: {}
-      });
+
+      //remove additional validation classnames since there are no form errors
+      this.setState({fieldClassNames: {}});
     }
 
+    //Ajax call for login
     LoginService.login(this.state.fields, (response) => {
+      //for simulation, just alert the status
       alert(response.message);
     });
 
@@ -56,6 +58,7 @@ class SignInForm extends Component {
     this.setState({fields});
   };
 
+  //form validator - check empty fields and set state accordingly
   validate = (signInDetails) => {
 
     const errors = {};

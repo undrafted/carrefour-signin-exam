@@ -12,6 +12,7 @@ const LoginService = {
     }).then(LoginService.checkStatus).then(callback);
   },
 
+  //check the returned status after the request, parse if the server returned a json response
   checkStatus: (response) => {
 
     if (response.status === 200 || response.status === 401) {
