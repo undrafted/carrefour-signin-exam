@@ -11,7 +11,7 @@ class App extends Component {
       <div className='App'>
         <Navbar />
         <SignInForm />
-        <hr className='divider'></hr>
+        <div className="divider"><hr></hr></div>
         <ProductsSection />
       </div>
     );

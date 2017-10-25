@@ -1,23 +1,56 @@
 .Product {
-  margin: 0 30px;
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
+  margin: 0 30px;
   margin-bottom: 35px;
 }
 
 .Product img {
-  height: 200px;
   width: 200px;
+  height: 200px;
   border: 3px solid #f6f6f6;
 }
 
 .product-name {
   font-size: 14px;
-  color: #414141;
   margin: 20px 0 2px 0;
+  color: #414141;
 }
 
 .product-price {
   font-size: 18px;
   font-weight: 600;
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .Product {
+    margin: 0 20px;
+    margin-bottom: 20px;
+  }
+  .Product img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .Product img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .Product {
+    margin-bottom: 30px;
+  }
+  .Product img {
+    width: 200px;
+    height: 200px;
+  }
 }

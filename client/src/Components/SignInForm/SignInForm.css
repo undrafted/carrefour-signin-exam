@@ -1,4 +1,9 @@
 .SignInForm {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-in-container {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
@@ -10,7 +15,7 @@
   align-items: center;
 }
 
-.SignInForm form {
+.sign-in-container form {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -21,14 +26,14 @@ header {
   text-align: center;
 }
 
-.SignInForm h1 {
+.sign-in-container h1 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #414141;
 }
 
-.SignInForm h2 {
+.sign-in-container h2 {
   color: #333;
 }
 
@@ -94,7 +99,7 @@ span.validation-error {
   box-shadow: 0 0 4px 1px #daedff;
 }
 
-.formFooter {
+.form-footer {
   font-size: 12px;
   display: flex;
   margin: 20px 0;
@@ -112,7 +117,7 @@ span.validation-error {
   cursor: pointer;
 }
 
-.checkbox-keep-session > input[type='checkbox']+label:before {
+.checkbox-keep-session > input[type='checkbox'] + label:before {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -124,16 +129,16 @@ span.validation-error {
   background: #fff;
 }
 
-.checkbox-keep-session > input[type='checkbox']:focus+label:before {
+.checkbox-keep-session > input[type='checkbox']:focus + label:before {
   box-shadow: 0 0 0 3px #f6f6f6;
 }
 
-.checkbox-keep-session > input[type='checkbox']:checked+label:before {
+.checkbox-keep-session > input[type='checkbox']:checked + label:before {
   border: 1px solid #0053a1;
   background: #0053a1;
 }
 
-.checkbox-keep-session > input[type='checkbox']:checked+label:after {
+.checkbox-keep-session > input[type='checkbox']:checked + label:after {
   position: absolute;
   top: 9px;
   left: 5px;
@@ -156,13 +161,13 @@ span.validation-error {
   -khtml-user-select: none;
 }
 
-.formFooter a {
+.form-footer a {
   margin-left: auto;
   text-decoration: none;
   color: #05549f;
 }
 
-.formFooter a:hover {
+.form-footer a:hover {
   text-decoration: underline;
 }
 
@@ -186,4 +191,82 @@ span.validation-error {
   -webkit-box-shadow: 0 0 4px 4px #daedff;
   -moz-box-shadow: 0 0 4px 4px #daedff;
   box-shadow: 0 0 4px 4px #daedff;
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .SignInForm {
+    width: 100%;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .sign-in-container {
+    width: 100%;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 680px) {
+  .SignInForm {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .sign-in-container {
+    padding: 20px;
+  }
+  .sign-in-container form {
+    width: 100%;
+  }
+  .sign-in-container h1 {
+    font-size: 20px;
+  }
+  .sign-in-container h2 {
+    font-size: 12px;
+  }
+  .input-fields, .form-footer, .btn-submit {
+    width: 100%;
+  }
+  .input-fields {
+    font-size: 14px;
+    width: 100%;
+  }
+  span.validation-error {
+    font-size: 12px;
+    top: -14px;
+    right: 0;
+    width: 100px;
+  }
+  .form-footer {
+    font-size: 10px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-footer a {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .sign-in-container {
+    padding: 15px;
+  }
+  .sign-in-container h1 {
+    font-size: 18px;
+  }
+  .sign-in-container h2 {
+    font-size: 10px;
+  }
+  span.validation-error {
+    font-size: 10px;
+    width: 90px;
+  }
 }
