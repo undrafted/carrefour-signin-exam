@@ -21,6 +21,12 @@ input {
 }
 
 input[type=search] {
+
+  /*avoid vendor specific styling*/
+  -moz-appearance: none;/* older firefox */
+  -webkit-appearance: none; /* safari, chrome */
+  appearance: none; /* rest */
+
   font-family: inherit;
   font-size: 100%;
   width: 50px;
@@ -61,9 +67,7 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button {
 
 /*==========  MEDIA QUERIES  ==========*/
 
-
 /* Small Devices, Tablets */
-
 @media only screen and (max-width: 768px) {
   .Navbar {
     padding: 0 80px;
@@ -99,7 +103,6 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button {
 
 
 /* Extra Small Devices, Phones */
-
 @media only screen and (max-width: 680px) {
   .Navbar {
     margin-bottom: 48px;
@@ -125,7 +128,6 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button {
 
 
 /* Custom, iPhone Retina */
-
 @media only screen and (max-width: 420px) {
   .Navbar {
     margin-bottom: 30px;
